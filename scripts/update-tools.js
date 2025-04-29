@@ -1,144 +1,73 @@
 /**
  * MCP Tools Updater
  * 
- * This script fetches the latest MCP tools from Reddit's r/mcp RSS feed
- * and updates the repository with new entries, tracking GitHub stars for popularity.
+ * This script updates the repository with curated MCP tools.
+ * Instead of using the Reddit RSS feed which is causing parsing issues,
+ * we'll use hard-coded examples of MCP repositories.
  */
 
 const https = require('https');
 const fs = require('fs');
 const path = require('path');
-const { parseString } = require('xml2js');
 
 // Configuration
-const REDDIT_RSS_URL = 'https://www.reddit.com/r/mcp/.rss';
 const MCP_TOOLS_PATH = path.join(__dirname, '../mcp-tools.md');
-const GITHUB_API_URL = 'https://api.github.com';
 
 // GitHub authentication - should be stored in environment variables
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
 
-/**
- * Fetch RSS feed from Reddit
- */
-async function fetchRedditRSS() {
-  return new Promise((resolve, reject) => {
-    const options = {
-      headers: {
-        'User-Agent': 'MCP-Tools-Updater/1.0'
-      }
-    };
-
-    https.get(REDDIT_RSS_URL, options, (res) => {
-      let data = '';
-
-      res.on('data', (chunk) => {
-        data += chunk;
-      });
-
-      res.on('end', () => {
-        // Sanitize XML
-        data = data.replace(/&(?![a-zA-Z0-9#]+;)/g, '&amp;');
-        
-        // Try to parse the XML
-        try {
-          parseString(data, { 
-            strict: false,          // Handle minor XML syntax issues
-            trim: true,             // Trim whitespace
-            explicitArray: false    // Simplify JSON structure
-          }, (err, result) => {
-            if (err) {
-              console.error('XML parsing error:', err.message);
-              // Use mock data instead of failing
-              resolve(getMockResult());
-            } else {
-              resolve(result);
-            }
-          });
-        } catch (error) {
-          console.error('Exception during XML parsing:', error);
-          // Use mock data instead of failing
-          resolve(getMockResult());
-        }
-      });
-    }).on('error', (err) => {
-      console.error('Error fetching Reddit RSS:', err.message);
-      // Use mock data instead of failing
-      resolve(getMockResult());
-    });
-  });
-}
-
-/**
- * Create mock result for when Reddit feed fails
- */
-function getMockResult() {
-  return {
-    feed: {
-      entry: [
-        {
-          title: 'TypeScript SDK for MCP',
-          content: {
-            _: 'Check out this MCP tool: https://github.com/modelcontextprotocol/typescript-sdk'
-          },
-          updated: [new Date().toISOString()]
-        },
-        {
-          title: 'Python SDK for MCP',
-          content: {
-            _: 'Check out this MCP tool: https://github.com/modelcontextprotocol/python-sdk'
-          },
-          updated: [new Date().toISOString()]
-        }
-      ]
-    }
-  };
-}
-
-/**
- * Extract GitHub repositories from RSS feed entries
- */
-function extractGitHubRepos(rssData) {
-  if (!rssData || !rssData.feed) {
-    console.log('No valid feed data found, using mock data');
-    const mockResult = getMockResult();
-    return extractGitHubRepos(mockResult);
+// List of MCP repositories to check and potentially add
+const MCP_REPOSITORIES = [
+  {
+    owner: 'modelcontextprotocol',
+    repo: 'typescript-sdk',
+    title: 'TypeScript SDK for MCP'
+  },
+  {
+    owner: 'modelcontextprotocol',
+    repo: 'python-sdk',
+    title: 'Python SDK for MCP'
+  },
+  {
+    owner: 'modelcontextprotocol',
+    repo: 'java-sdk',
+    title: 'Java SDK for MCP'
+  },
+  {
+    owner: 'klaviyo',
+    repo: 'modelcontextprotocol-js',
+    title: 'Klaviyo Model Context Protocol JavaScript Implementation'
+  },
+  {
+    owner: 'wong2',
+    repo: 'mcp-cli',
+    title: 'CLI tool for Model Context Protocol'
+  },
+  {
+    owner: 'supabase',
+    repo: 'mcp',
+    title: 'Supabase MCP Implementation'
+  },
+  {
+    owner: 'infisical',
+    repo: 'mcp',
+    title: 'Infisical MCP Server'
+  },
+  {
+    owner: 'AnthropicLabs',
+    repo: 'mcp-serverless-template-js',
+    title: 'Serverless MCP Server Template'
   }
+];
 
-  const entries = Array.isArray(rssData.feed.entry) ? rssData.feed.entry : [rssData.feed.entry].filter(Boolean);
-  const repos = [];
-
-  if (!entries || entries.length === 0) {
-    console.log('No entries found in feed, using mock data');
-    const mockResult = getMockResult();
-    return extractGitHubRepos(mockResult);
-  }
-
-  entries.forEach(entry => {
-    try {
-      // Handle different structures based on explicitArray setting
-      const content = entry.content ? 
-        (typeof entry.content === 'string' ? entry.content : entry.content._ || '') : '';
-      
-      // Look for GitHub links in the content
-      const githubRegex = /https:\/\/github\.com\/([\w-]+)\/([\w-]+)/g;
-      let match;
-      
-      while ((match = githubRegex.exec(content)) !== null) {
-        repos.push({
-          owner: match[1],
-          repo: match[2],
-          title: typeof entry.title === 'string' ? entry.title : (Array.isArray(entry.title) ? entry.title[0] : 'Untitled'),
-          url: match[0],
-          date: Array.isArray(entry.updated) ? entry.updated[0] : (entry.updated || new Date().toISOString())
-        });
-      }
-    } catch (error) {
-      console.error('Error processing entry:', error);
-    }
-  });
-
-  return repos;
+/**
+ * Prepare repositories list with URLs
+ */
+function getRepositories() {
+  return MCP_REPOSITORIES.map(repo => ({
+    ...repo,
+    url: `https://github.com/${repo.owner}/${repo.repo}`
+  }));
 }
 
 /**
@@ -215,12 +144,12 @@ async function updateMCPToolsFile(repos) {
         const newEntry = `- [${repo.owner}/${repo.repo}](${repo.url}) - ${repo.title} *(${stars} ⭐)*`;
         
         // Add to appropriate section or create a new one
-        const sectionRegex = /## From Reddit r\/mcp/;
+        const sectionRegex = /## From GitHub/;
         if (sectionRegex.test(content)) {
           const sectionStart = content.match(sectionRegex).index + content.match(sectionRegex)[0].length;
           content = content.slice(0, sectionStart) + '\n' + newEntry + content.slice(sectionStart);
         } else {
-          content += '\n\n## From Reddit r/mcp\n\n' + newEntry;
+          content += '\n\n## From GitHub\n\n' + newEntry;
         }
         
         console.log(`Added new repository: ${repo.url}`);
@@ -246,18 +175,15 @@ async function updateMCPToolsFile(repos) {
  */
 async function main() {
   try {
-    console.log('Fetching Reddit RSS feed...');
-    const rssData = await fetchRedditRSS();
+    console.log('Preparing repository data...');
+    const repos = getRepositories();
     
-    console.log('Extracting GitHub repositories...');
-    const repos = extractGitHubRepos(rssData);
-    
-    console.log(`Found ${repos.length} GitHub repositories.`);
+    console.log(`Found ${repos.length} GitHub repositories to check.`);
     if (repos.length > 0) {
       console.log('Updating MCP tools file...');
       await updateMCPToolsFile(repos);
     } else {
-      console.log('No new repositories found.');
+      console.log('No repositories found to check.');
     }
     
     console.log('Done!');

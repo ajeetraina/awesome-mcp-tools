@@ -1,39 +1,39 @@
 # MCP Tools
 
-A curated collection of tools for working with Model Card Platforms (MCPs).
+A curated collection of tools for working with Model Context Protocol (MCP).
 
-## Model Card Creation
+## Development Tools
 
-- [Model Card Toolkit](https://github.com/tensorflow/model-card-toolkit) - Google's toolkit for creating comprehensive model cards
-- [HF Model Cards](https://huggingface.co/docs/hub/model-cards) - Hugging Face's model card creator
-- [Datasheets for Datasets](https://github.com/JRMeyer/datasheets-for-datasets) - Templates for dataset documentation
+- [MCP CLI](https://github.com/wong2/mcp-cli) - Command-line inspector for testing MCP servers
+- [MCP Get](https://mcp-get.com/) - Tool for installing and managing MCP servers
+- [MCP Inspector](https://modelcontextprotocol.io/docs/tools/inspector) - Test and inspect your MCP servers with an interactive debugging tool
+- [Supergateway](https://github.com/supercorp-ai/supergateway) - Run MCP stdio servers over SSE
+- [fast-agent](https://github.com/evalstate/fast-agent) - Python Agent framework with full multi-modal MCP support
 
-## Validators & Analyzers
+## Server Creation Frameworks
 
-- [Model Card Explorer](https://github.com/example/model-card-explorer) - Tool for analyzing and visualizing model cards
-- [Model Card Validator](https://github.com/example/model-validator) - Validates model cards against best practices
-- [MCP Compliance Check](https://github.com/example/mcp-compliance) - Ensures model cards meet regulatory requirements
+- [TypeScript SDK](https://github.com/modelcontextprotocol/typescript-sdk) - Official TypeScript SDK for building MCP servers
+- [Python SDK](https://github.com/modelcontextprotocol/python-sdk) - Official Python SDK for building MCP servers
+- [Java SDK](https://github.com/modelcontextprotocol/java-sdk) - Official Java SDK for building MCP servers
+- [C# SDK](https://github.com/modelcontextprotocol/csharp-sdk) - Official C# SDK for building MCP servers
+- [BeeAI Framework](https://i-am-bee.github.io/beeai-framework) - Framework for building agentic workflows with MCP support
 
 ## Integration Tools
 
-- [MCP-CI](https://github.com/example/mcp-ci) - CI/CD integration for model card platforms
-- [MCP-Git](https://github.com/example/mcp-git) - Git integration for model card versioning
-- [MCP-API](https://github.com/example/mcp-api) - API tools for model card platforms
+- [Pipedream MCP](https://mcp.pipedream.com/) - MCP servers with built-in auth for 3,000+ APIs and 10,000+ tools
+- [Zapier MCP](https://zapier.com/mcp) - MCP Server with over 7,000+ apps and 30,000+ actions
+- [Klavis AI](https://www.klavis.ai/) - Open-source infrastructure to use, build & scale MCPs with Slack/Discord/web integration
 
-## Visualization
+## Learning Resources
 
-- [Model Card Dashboard](https://github.com/example/model-card-dashboard) - Interactive dashboard for model cards
-- [MCP Analytics](https://github.com/example/mcp-analytics) - Analytics for model card usage and impact
+- [MCP Workshop Video](https://www.youtube.com/watch?v=kQmXtrmQ5Zg) - Full workshop with Mahesh Murag of Anthropic
+- [Building Effective Agents Guide](https://www.anthropic.com/research/building-effective-agents) - Anthropic's guide to building effective agents (relevant for MCP development)
+- [MCP Documentation](https://modelcontextprotocol.io/) - Official MCP documentation
 
-## Documentation Generation
+## Additional Resources
 
-- [Auto-MCP](https://github.com/example/auto-mcp) - Automatic model card generation from code
-- [MCP-Doc](https://github.com/example/mcp-doc) - Documentation generator for model cards
-
-## Ecosystem Tools
-
-- [MCP-Scanner](https://github.com/example/mcp-scanner) - Scans repositories for models lacking proper documentation
-- [MCP-Monitor](https://github.com/example/mcp-monitor) - Monitors model performance related to model cards
+- [Awesome MCP Servers](https://github.com/punkpeye/awesome-mcp-servers) - Curated list of MCP servers
+- [MCP Servers Repository](https://github.com/modelcontextprotocol/servers) - Complete collection of reference implementations and community servers
 
 ---
 

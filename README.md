@@ -1,10 +1,10 @@
 # Awesome MCP Tools
 
-A curated list of awesome Model Card Platforms (MCPs), tools, servers, and clients - inspired by [kubetools.collabnix.com](https://kubetools.collabnix.com/).
+A curated list of awesome Model Context Platforms (MCPs), tools, servers, and clients.
 
 ## What is an MCP?
 
-Model Card Platforms (MCPs) provide standardized documentation for machine learning models, covering model specifications, capabilities, limitations, and ethical considerations. MCPs help enhance transparency, governance, and safe deployment of AI systems.
+
 
 ## Contents
 
@@ -37,6 +37,3 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 This project is licensed under the MIT License
 
----
-
-**Maintained by [Ajeet Raina](https://github.com/ajeetraina)**

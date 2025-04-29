@@ -24,7 +24,7 @@ jobs:
         run: npm install
 
       - name: Run update script
-        run: node scripts/update-tools.js
+        run: node scripts/update-mcp-repos.js
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -33,4 +33,4 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add -A
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update MCP tools from Reddit" && git push)
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update MCP tools from GitHub" && git push)

@@ -4,7 +4,7 @@ A curated list of awesome Model Context Platforms (MCPs), tools, servers, and cl
 
 ## What is an MCP?
 
-
+Model Context Platforms (MCPs) are systems that streamline the documentation, deployment, and governance of machine learning models. They help organizations create standardized documentation (such as model cards), track model performance, ensure compliance with regulations, and provide transparency about how AI systems are built and used. MCPs are essential for responsible AI development and deployment, offering a structured approach to managing the entire lifecycle of machine learning models.
 
 ## Contents
 
@@ -36,4 +36,3 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 ## License
 
 This project is licensed under the MIT License
-

@@ -46,7 +46,7 @@ async function fetchRedditRSS() {
  * Extract GitHub repositories from RSS feed entries
  */
 function extractGitHubRepos(rssData) {
-  const entries = rssData.feed.entry || [];
+  const entries = rssData.feed && rssData.feed.entry ? rssData.feed.entry : [];
   const repos = [];
 
   entries.forEach(entry => {
@@ -82,7 +82,7 @@ async function fetchGitHubStars(owner, repo) {
       headers: {
         'User-Agent': 'MCP-Tools-Updater',
         'Accept': 'application/vnd.github.v3+json',
-        'Authorization': GITHUB_TOKEN ? `token ${GITHUB_TOKEN}` : undefined
+        'Authorization': process.env.GITHUB_TOKEN ? `Bearer ${process.env.GITHUB_TOKEN}` : ''
       }
     };
 
@@ -98,11 +98,13 @@ async function fetchGitHubStars(owner, repo) {
           const repoData = JSON.parse(data);
           resolve(repoData.stargazers_count || 0);
         } catch (err) {
-          reject(err);
+          console.error('Error parsing GitHub API response:', err);
+          resolve(0); // Return 0 stars instead of failing completely
         }
       });
     }).on('error', (err) => {
-      reject(err);
+      console.error(`Error fetching stars for ${owner}/${repo}:`, err.message);
+      resolve(0); // Return 0 stars instead of failing completely
     });
   });
 }
@@ -112,6 +114,12 @@ async function fetchGitHubStars(owner, repo) {
  */
 async function updateMCPToolsFile(repos) {
   try {
+    // Ensure the file exists before trying to read it
+    if (!fs.existsSync(MCP_TOOLS_PATH)) {
+      console.error(`File does not exist: ${MCP_TOOLS_PATH}`);
+      return;
+    }
+    
     // Read the current file
     let content = fs.readFileSync(MCP_TOOLS_PATH, 'utf8');
     
@@ -166,6 +174,8 @@ async function main() {
     if (repos.length > 0) {
       console.log('Updating MCP tools file...');
       await updateMCPToolsFile(repos);
+    } else {
+      console.log('No new repositories found.');
     }
     
     console.log('Done!');

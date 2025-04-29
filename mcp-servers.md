@@ -1,6 +1,40 @@
-# MCP Servers
+# Core MCP Reference Servers
 
-A curated list of Model Card Platform servers and implementations.
+A curated list of reference Model Context Protocol (MCP) servers and implementations.
+
+## Data & Files Servers
+
+| Server | Description |
+|--------|-------------|
+| Filesystem | Secure file operations with configurable access controls |
+| PostgreSQL | Read-only database access with schema inspection |
+| SQLite | Database interaction and business intelligence features |
+| Google Drive | File access and search capabilities |
+
+## Dev Tools Servers
+
+| Server | Description |
+|--------|-------------|
+| Git | Tools to read, search, and manipulate Git repositories |
+| GitHub | Repository management and GitHub API integration |
+| GitLab | GitLab API integration for project management |
+| Sentry | Error tracking and analysis from Sentry.io |
+
+## Web & Browser Servers
+
+| Server | Description |
+|--------|-------------|
+| Brave Search | Web search using Brave's Search API |
+| Fetch | Web content fetching optimized for LLM usage |
+| Puppeteer | Browser automation and web scraping |
+
+## Communication Servers
+
+| Server | Description |
+|--------|-------------|
+| Slack | Channel management and messaging capabilities |
+| Google Maps | Location services and place details |
+| Memory | Knowledge graph-based persistent memory system |
 
 ## Open Source MCP Servers
 

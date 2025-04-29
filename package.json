@@ -1,0 +1,30 @@
+{
+  "name": "awesome-mcp-tools",
+  "version": "1.0.0",
+  "description": "A curated list of awesome Model Card Platform tools and servers",
+  "main": "index.js",
+  "scripts": {
+    "update": "node scripts/update-tools.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ajeetraina/awesome-mcp-tools.git"
+  },
+  "keywords": [
+    "mcp",
+    "model-cards",
+    "ai",
+    "ml",
+    "awesome-list"
+  ],
+  "author": "Ajeet Raina",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ajeetraina/awesome-mcp-tools/issues"
+  },
+  "homepage": "https://github.com/ajeetraina/awesome-mcp-tools#readme",
+  "dependencies": {
+    "xml2js": "^0.6.2"
+  }
+}

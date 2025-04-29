@@ -38,3 +38,10 @@ A curated collection of tools for working with Model Context Protocol (MCP).
 ---
 
 **Want to add a tool? Submit a pull request!**
+
+## From GitHub
+- [AnthropicLabs/mcp-serverless-template-js](https://github.com/AnthropicLabs/mcp-serverless-template-js) - Serverless MCP Server Template *(0 ⭐)*
+- [infisical/mcp](https://github.com/infisical/mcp) - Infisical MCP Server *(0 ⭐)*
+- [supabase/mcp](https://github.com/supabase/mcp) - Supabase MCP Implementation *(0 ⭐)*
+
+- [klaviyo/modelcontextprotocol-js](https://github.com/klaviyo/modelcontextprotocol-js) - Klaviyo Model Context Protocol JavaScript Implementation *(0 ⭐)*

@@ -1,4 +1,4 @@
-# Awesome Docker Desktop MCP Catalog and Toolkits
+# Docker Desktop MCP Catalog and Toolkits
 
 A curated list of awesome Docker Desktop MCP Catalog and Toolkits
 

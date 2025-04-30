@@ -1,6 +1,6 @@
-# Awesome Docker MCP Catalog and Toolkits
+# Awesome Docker Desktop MCP Catalog and Toolkits
 
-A curated list of awesome Docker Model Catalog and Toolkits
+A curated list of awesome Docker Desktop MCP Catalog and Toolkits
 
 ## What is MCP?
 

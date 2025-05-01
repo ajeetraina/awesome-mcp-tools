@@ -20,7 +20,7 @@ MCP follows a client-server architecture where:
 ### Docker Desktop MCP Extension
 
 | Tool | Description | Docker Hub Pulls | Link |
-|------|-------------|-----------------|------|
+|------|-------------|-----------------|---------|
 | **Docker MCP Toolkit** | Official Docker Desktop Extension for MCP servers | 10K+ | [Docker Hub](https://hub.docker.com/extensions/docker/labs-ai-tools-for-devs) |
 
 ### Official MCP Servers
@@ -28,21 +28,21 @@ MCP follows a client-server architecture where:
 The following MCP servers are maintained as reference implementations by Docker/Anthropic:
 
 | Server | Description | Docker Hub Pulls | Link |
-|--------|-------------|-----------------|------|
-| **AWS KB Retrieval** | Retrieval from AWS Knowledge Base using Bedrock Agent Runtime | - | [GitHub](https://github.com/docker/mcp-servers/blob/main/src/aws-kb-retrieval-server) |
+|--------|-------------|-----------------|---------|
+| **AWS KB Retrieval** | Retrieval from AWS Knowledge Base using Bedrock Agent Runtime | 960+ | [GitHub](https://github.com/docker/mcp-servers/blob/main/src/aws-kb-retrieval-server) / [Docker Hub](https://hub.docker.com/r/mcp/aws-kb-retrieval-server) |
 | **Brave Search** | Web and local search using Brave's Search API | - | [GitHub](https://github.com/docker/mcp-servers/blob/main/src/brave-search) |
 | **EverArt** | AI image generation using various models | - | [GitHub](https://github.com/docker/mcp-servers/blob/main/src/everart) |
 | **Everything** | Reference / test server with prompts, resources, and tools | - | [GitHub](https://github.com/docker/mcp-servers/blob/main/src/everything) |
 | **Fetch** | Web content fetching and conversion for efficient LLM usage | - | [GitHub](https://github.com/docker/mcp-servers/blob/main/src/fetch) |
 | **Filesystem** | Secure file operations with configurable access controls | - | [GitHub](https://github.com/docker/mcp-servers/blob/main/src/filesystem) |
 | **Git** | Tools to read, search, and manipulate Git repositories | - | [GitHub](https://github.com/docker/mcp-servers/blob/main/src/git) |
-| **GitHub** | Repository management, file operations, and GitHub API integration | - | [GitHub](https://github.com/docker/mcp-servers/blob/main/src/github) |
-| **GitLab** | GitLab API, enabling project management | - | [GitHub](https://github.com/docker/mcp-servers/blob/main/src/gitlab) |
+| **GitHub** | Repository management, file operations, and GitHub API integration | 914+ | [GitHub](https://github.com/docker/mcp-servers/blob/main/src/github) / [Docker Hub](https://hub.docker.com/r/mcp/github-mcp-server) |
+| **GitLab** | GitLab API, enabling project management | 3.9K+ | [GitHub](https://github.com/docker/mcp-servers/blob/main/src/gitlab) / [Docker Hub](https://hub.docker.com/r/mcp/gitlab) |
 | **Google Drive** | File access and search capabilities for Google Drive | - | [GitHub](https://github.com/docker/mcp-servers/blob/main/src/gdrive) |
 | **Google Maps** | Location services, directions, and place details | - | [GitHub](https://github.com/docker/mcp-servers/blob/main/src/google-maps) |
 | **Memory** | Knowledge graph-based persistent memory system | - | [GitHub](https://github.com/docker/mcp-servers/blob/main/src/memory) |
 | **PostgreSQL** | Read-only database access with schema inspection | - | [GitHub](https://github.com/docker/mcp-servers/blob/main/src/postgres) |
-| **Puppeteer** | Browser automation and web scraping | - | [GitHub](https://github.com/docker/mcp-servers/blob/main/src/puppeteer) |
+| **Playwright** | Browser automation and web scraping | 411+ | [GitHub](https://github.com/docker/mcp-servers/blob/main/src/puppeteer) / [Docker Hub](https://hub.docker.com/r/mcp/playwright) |
 | **Redis** | Interact with Redis key-value stores | - | [GitHub](https://github.com/docker/mcp-servers/blob/main/src/redis) |
 | **Sentry** | Retrieving and analyzing issues from Sentry.io | - | [GitHub](https://github.com/docker/mcp-servers/blob/main/src/sentry) |
 | **Sequential Thinking** | Dynamic and reflective problem-solving through thought sequences | - | [GitHub](https://github.com/docker/mcp-servers/blob/main/src/sequentialthinking) |
@@ -55,7 +55,7 @@ The following MCP servers are maintained as reference implementations by Docker/
 These MCP servers are maintained by companies for their platforms:
 
 | Server | Description | Docker Hub Pulls | Link |
-|--------|-------------|-----------------|------|
+|--------|-------------|-----------------|---------|
 | **21st.dev Magic** | Create crafted UI components inspired by the best 21st.dev design engineers | - | [GitHub](https://github.com/21st-dev/magic-mcp) |
 | **Adfin** | The only platform you need to get paid - all payments in one place | - | [GitHub](https://github.com/Adfin-Engineering/mcp-server-adfin) |
 | **AgentQL** | Enable AI agents to get structured data from unstructured web with AgentQL | - | [GitHub](https://github.com/tinyfish-io/agentql-mcp) |
@@ -71,13 +71,15 @@ These MCP servers are maintained by companies for their platforms:
 | **Chronulus AI** | Predict anything with Chronulus AI forecasting | - | [GitHub](https://github.com/ChronulusAI/chronulus-mcp) |
 | **ClickHouse** | Query your ClickHouse database server | - | [GitHub](https://github.com/ClickHouse/mcp-clickhouse) |
 | **Cloudflare** | Deploy, configure & interrogate your resources on the Cloudflare platform | - | [GitHub](https://github.com/cloudflare/mcp-server-cloudflare) |
+| **Grafana** | MCP server for Grafana | 556+ | [GitHub](https://github.com/grafana/mcp-server) / [Docker Hub](https://hub.docker.com/r/mcp/grafana) |
+| **Notion** | Official Notion MCP Server | 1.2K+ | [Docker Hub](https://hub.docker.com/r/mcp/notion) |
 
 ### Docker MCP-Related Tools
 
 | Tool | Description | Docker Hub Pulls | Link |
-|------|-------------|-----------------|------|
+|------|-------------|-----------------|---------|
 | **Docker MCP Server** | MCP server for Docker | - | [GitHub](https://github.com/ckreiling/mcp-server-docker) |
-| **Docker Labs AI Tools for Devs** | Home for discovering MCP tools, seamlessly integrated into Docker | - | [GitHub](https://github.com/docker/labs-ai-tools-for-devs) |
+| **Docker Labs AI Tools for Devs** | Home for discovering MCP tools, seamlessly integrated into Docker | 10K+ | [GitHub](https://github.com/docker/labs-ai-tools-for-devs) |
 | **MCP Code Sandbox** | MCP server for executing code within Docker containers | - | [GitHub](https://github.com/Automata-Labs-team/code-sandbox-mcp) |
 | **MCP Containers** | Containerized versions of hundreds of MCP servers | - | [GitHub](https://github.com/metorial/mcp-containers) |
 | **MCP Gateway** | Gateway service that transforms existing APIs into MCP servers | - | [GitHub](https://github.com/mcp-ecosystem/mcp-gateway) |

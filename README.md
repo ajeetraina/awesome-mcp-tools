@@ -1,10 +1,14 @@
-# Docker Desktop MCP Catalog and Toolkits
+# Docker MCP Toolkit Portal
 
-A curated list of Docker Desktop MCP (Model Context Protocol) Catalog and Toolkits
+A comprehensive web-based portal for exploring and navigating the Docker Model Context Protocol (MCP) servers and clients.
+
+## Overview
+
+This repository hosts a portal designed to catalog and organize the various MCP servers and clients available in the Docker ecosystem. The Model Context Protocol (MCP) is an open protocol that standardizes how applications provide context to Large Language Models (LLMs), functioning like a "USB-C port for AI applications" by connecting AI models to different data sources and tools.
 
 ## What is MCP?
 
-Model Context Protocol (MCP) is an open protocol that standardizes how applications provide context to LLMs. It's like a "USB-C port for AI applications" - providing a standardized way to connect AI models to different data sources and tools, allowing LLMs to:
+Model Context Protocol (MCP) allows LLMs to:
 
 - Access data from diverse sources (files, databases, APIs)
 - Use specialized tools to perform actions
@@ -15,74 +19,22 @@ MCP follows a client-server architecture where:
 - **MCP Clients**: Programs like Claude Desktop, IDE plugins, or other AI tools that want to access data through MCP
 - **MCP Servers**: Lightweight programs that expose specific capabilities (like file access, database queries, or API interactions) through the standardized protocol
 
-## Contents
+## Portal Features
 
-### Docker Desktop MCP Extension
+The Docker MCP Toolkit Portal provides:
 
-| Tool | Description | Docker Hub Pulls | Link |
-|------|-------------|-----------------|---------|
-| **Docker MCP Toolkit** | Official Docker Desktop Extension for MCP servers | 10K+ | [Docker Hub](https://hub.docker.com/extensions/docker/labs-ai-tools-for-devs) |
+- **Categorized Server Listings**: Organized by Official Servers, Enterprise Integrations, and Docker MCP Tools
+- **Detailed Information**: Descriptions, GitHub repositories, Docker Hub links, and pull counts for each server
+- **Search Functionality**: Easily search through all available MCP servers
+- **Responsive Design**: Works on desktop and mobile devices
 
-### Official MCP Servers
+## Categories
 
-The following MCP servers are maintained as reference implementations by Docker/Anthropic:
+The portal organizes MCP servers into three main categories:
 
-| Server | Description | Docker Hub Pulls | Link |
-|--------|-------------|-----------------|---------|
-| **AWS KB Retrieval** | Retrieval from AWS Knowledge Base using Bedrock Agent Runtime | 960+ | [GitHub](https://github.com/docker/mcp-servers/blob/main/src/aws-kb-retrieval-server) / [Docker Hub](https://hub.docker.com/r/mcp/aws-kb-retrieval-server) |
-| **Brave Search** | Web and local search using Brave's Search API | - | [GitHub](https://github.com/docker/mcp-servers/blob/main/src/brave-search) |
-| **EverArt** | AI image generation using various models | - | [GitHub](https://github.com/docker/mcp-servers/blob/main/src/everart) |
-| **Everything** | Reference / test server with prompts, resources, and tools | - | [GitHub](https://github.com/docker/mcp-servers/blob/main/src/everything) |
-| **Fetch** | Web content fetching and conversion for efficient LLM usage | - | [GitHub](https://github.com/docker/mcp-servers/blob/main/src/fetch) |
-| **Filesystem** | Secure file operations with configurable access controls | - | [GitHub](https://github.com/docker/mcp-servers/blob/main/src/filesystem) |
-| **Git** | Tools to read, search, and manipulate Git repositories | - | [GitHub](https://github.com/docker/mcp-servers/blob/main/src/git) |
-| **GitHub** | Repository management, file operations, and GitHub API integration | 914+ | [GitHub](https://github.com/docker/mcp-servers/blob/main/src/github) / [Docker Hub](https://hub.docker.com/r/mcp/github-mcp-server) |
-| **GitLab** | GitLab API, enabling project management | 3.9K+ | [GitHub](https://github.com/docker/mcp-servers/blob/main/src/gitlab) / [Docker Hub](https://hub.docker.com/r/mcp/gitlab) |
-| **Google Drive** | File access and search capabilities for Google Drive | - | [GitHub](https://github.com/docker/mcp-servers/blob/main/src/gdrive) |
-| **Google Maps** | Location services, directions, and place details | - | [GitHub](https://github.com/docker/mcp-servers/blob/main/src/google-maps) |
-| **Memory** | Knowledge graph-based persistent memory system | - | [GitHub](https://github.com/docker/mcp-servers/blob/main/src/memory) |
-| **PostgreSQL** | Read-only database access with schema inspection | - | [GitHub](https://github.com/docker/mcp-servers/blob/main/src/postgres) |
-| **Playwright** | Browser automation and web scraping | 411+ | [GitHub](https://github.com/docker/mcp-servers/blob/main/src/puppeteer) / [Docker Hub](https://hub.docker.com/r/mcp/playwright) |
-| **Redis** | Interact with Redis key-value stores | - | [GitHub](https://github.com/docker/mcp-servers/blob/main/src/redis) |
-| **Sentry** | Retrieving and analyzing issues from Sentry.io | - | [GitHub](https://github.com/docker/mcp-servers/blob/main/src/sentry) |
-| **Sequential Thinking** | Dynamic and reflective problem-solving through thought sequences | - | [GitHub](https://github.com/docker/mcp-servers/blob/main/src/sequentialthinking) |
-| **Slack** | Channel management and messaging capabilities | - | [GitHub](https://github.com/docker/mcp-servers/blob/main/src/slack) |
-| **Sqlite** | Database interaction and business intelligence capabilities | - | [GitHub](https://github.com/docker/mcp-servers/blob/main/src/sqlite) |
-| **Time** | Time and timezone conversion capabilities | - | [GitHub](https://github.com/docker/mcp-servers/blob/main/src/time) |
-
-### Popular Official Enterprise Integrations
-
-These MCP servers are maintained by companies for their platforms:
-
-| Server | Description | Docker Hub Pulls | Link |
-|--------|-------------|-----------------|---------|
-| **21st.dev Magic** | Create crafted UI components inspired by the best 21st.dev design engineers | - | [GitHub](https://github.com/21st-dev/magic-mcp) |
-| **Adfin** | The only platform you need to get paid - all payments in one place | - | [GitHub](https://github.com/Adfin-Engineering/mcp-server-adfin) |
-| **AgentQL** | Enable AI agents to get structured data from unstructured web with AgentQL | - | [GitHub](https://github.com/tinyfish-io/agentql-mcp) |
-| **AgentRPC** | Connect to any function, any language, across network boundaries | - | [GitHub](https://github.com/agentrpc/agentrpc) |
-| **Aiven** | Navigate your Aiven projects and interact with PostgreSQL, Apache Kafka, etc. | - | [GitHub](https://github.com/Aiven-Open/mcp-aiven) |
-| **Apify** | Use 3,000+ pre-built cloud tools to extract data from websites | - | [GitHub](https://github.com/apify/actors-mcp-server) |
-| **Audiense Insights** | Marketing insights and audience analysis | - | [GitHub](https://github.com/AudienseCo/mcp-audiense-insights) |
-| **Axiom** | Query and analyze your Axiom logs, traces, and event data | - | [GitHub](https://github.com/axiomhq/mcp-server-axiom) |
-| **Bankless Onchain** | Query Onchain data, like ERC20 tokens, transaction history | - | [GitHub](https://github.com/bankless/onchain-mcp) |
-| **Box** | Interact with the Intelligent Content Management platform | - | [GitHub](https://github.com/box-community/mcp-server-box) |
-| **Browserbase** | Automate browser interactions in the cloud | - | [GitHub](https://github.com/browserbase/mcp-server-browserbase) |
-| **Chroma** | Embeddings, vector search, document storage, and full-text search | - | [GitHub](https://github.com/chroma-core/chroma-mcp) |
-| **Chronulus AI** | Predict anything with Chronulus AI forecasting | - | [GitHub](https://github.com/ChronulusAI/chronulus-mcp) |
-| **ClickHouse** | Query your ClickHouse database server | - | [GitHub](https://github.com/ClickHouse/mcp-clickhouse) |
-| **Cloudflare** | Deploy, configure & interrogate your resources on the Cloudflare platform | - | [GitHub](https://github.com/cloudflare/mcp-server-cloudflare) |
-| **Grafana** | MCP server for Grafana | 556+ | [GitHub](https://github.com/grafana/mcp-server) / [Docker Hub](https://hub.docker.com/r/mcp/grafana) |
-| **Notion** | Official Notion MCP Server | 1.2K+ | [Docker Hub](https://hub.docker.com/r/mcp/notion) |
-
-### Docker MCP-Related Tools
-
-| Tool | Description | Docker Hub Pulls | Link |
-|------|-------------|-----------------|---------|
-| **Docker MCP Server** | MCP server for Docker | - | [GitHub](https://github.com/ckreiling/mcp-server-docker) |
-| **Docker Labs AI Tools for Devs** | Home for discovering MCP tools, seamlessly integrated into Docker | 10K+ | [GitHub](https://github.com/docker/labs-ai-tools-for-devs) |
-| **MCP Code Sandbox** | MCP server for executing code within Docker containers | - | [GitHub](https://github.com/Automata-Labs-team/code-sandbox-mcp) |
-| **MCP Containers** | Containerized versions of hundreds of MCP servers | - | [GitHub](https://github.com/metorial/mcp-containers) |
-| **MCP Gateway** | Gateway service that transforms existing APIs into MCP servers | - | [GitHub](https://github.com/mcp-ecosystem/mcp-gateway) |
+1. **Official MCP Servers**: Maintained as reference implementations by Docker/Anthropic
+2. **Enterprise Integrations**: MCP servers maintained by companies for their platforms
+3. **Docker MCP Tools**: Tools related to Docker MCP ecosystem
 
 ## Using Docker MCP Toolkit
 
@@ -100,10 +52,25 @@ To use Docker MCP Toolkit, you need:
 5. Once installed, open the extension from the left sidebar
 6. Browse the catalog and start using MCP tools with your AI assistant
 
+## Portal Structure
+
+The portal contains the following files:
+
+- `portal/index.html`: Main HTML structure
+- `portal/styles.css`: CSS styling for the portal
+- `portal/script.js`: JavaScript for dynamic functionality
+
+## Viewing the Portal
+
+To view the portal locally:
+
+1. Clone this repository
+2. Open the `portal/index.html` file in your web browser
+
 ## Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+Contributions are welcome! If you'd like to add or update MCP server information, please submit a pull request with your changes.
 
 ## License
 
-This project is licensed under the MIT License
+This project is licensed under the MIT License.

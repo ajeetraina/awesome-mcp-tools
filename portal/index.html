@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Docker MCP Toolkit Portal</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png" type="image/png">
 </head>
 <body>
     <header>
@@ -39,12 +40,8 @@
                 </ul>
                 
                 <h2>Features</h2>
-                <ul>
-                    <li><a href="#">File Operations</a></li>
-                    <li><a href="#">Database Access</a></li>
-                    <li><a href="#">API Integration</a></li>
-                    <li><a href="#">Web Automation</a></li>
-                    <li><a href="#">AI Tools</a></li>
+                <ul class="features-list">
+                    <!-- Feature categories will be populated by JavaScript -->
                 </ul>
             </aside>
 
@@ -52,137 +49,7 @@
                 <section id="official-servers">
                     <h2 class="section-title">Official MCP Servers</h2>
                     <div class="cards-container">
-                        <!-- AWS KB Retrieval -->
-                        <div class="card">
-                            <div class="card-header">AWS KB Retrieval</div>
-                            <div class="card-body">
-                                <div class="card-description">
-                                    <span class="badge official">Official</span>
-                                    <span class="badge pulls">960+ pulls</span>
-                                    <p>Retrieval from AWS Knowledge Base using Bedrock Agent Runtime</p>
-                                </div>
-                                <div class="card-links">
-                                    <a href="https://github.com/docker/mcp-servers/blob/main/src/aws-kb-retrieval-server">GitHub</a>
-                                    <a href="https://hub.docker.com/r/mcp/aws-kb-retrieval-server">Docker Hub</a>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Brave Search -->
-                        <div class="card">
-                            <div class="card-header">Brave Search</div>
-                            <div class="card-body">
-                                <div class="card-description">
-                                    <span class="badge official">Official</span>
-                                    <p>Web and local search using Brave's Search API</p>
-                                </div>
-                                <div class="card-links">
-                                    <a href="https://github.com/docker/mcp-servers/blob/main/src/brave-search">GitHub</a>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- EverArt -->
-                        <div class="card">
-                            <div class="card-header">EverArt</div>
-                            <div class="card-body">
-                                <div class="card-description">
-                                    <span class="badge official">Official</span>
-                                    <p>AI image generation using various models</p>
-                                </div>
-                                <div class="card-links">
-                                    <a href="https://github.com/docker/mcp-servers/blob/main/src/everart">GitHub</a>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Everything -->
-                        <div class="card">
-                            <div class="card-header">Everything</div>
-                            <div class="card-body">
-                                <div class="card-description">
-                                    <span class="badge official">Official</span>
-                                    <p>Reference / test server with prompts, resources, and tools</p>
-                                </div>
-                                <div class="card-links">
-                                    <a href="https://github.com/docker/mcp-servers/blob/main/src/everything">GitHub</a>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Fetch -->
-                        <div class="card">
-                            <div class="card-header">Fetch</div>
-                            <div class="card-body">
-                                <div class="card-description">
-                                    <span class="badge official">Official</span>
-                                    <p>Web content fetching and conversion for efficient LLM usage</p>
-                                </div>
-                                <div class="card-links">
-                                    <a href="https://github.com/docker/mcp-servers/blob/main/src/fetch">GitHub</a>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Filesystem -->
-                        <div class="card">
-                            <div class="card-header">Filesystem</div>
-                            <div class="card-body">
-                                <div class="card-description">
-                                    <span class="badge official">Official</span>
-                                    <p>Secure file operations with configurable access controls</p>
-                                </div>
-                                <div class="card-links">
-                                    <a href="https://github.com/docker/mcp-servers/blob/main/src/filesystem">GitHub</a>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Git -->
-                        <div class="card">
-                            <div class="card-header">Git</div>
-                            <div class="card-body">
-                                <div class="card-description">
-                                    <span class="badge official">Official</span>
-                                    <p>Tools to read, search, and manipulate Git repositories</p>
-                                </div>
-                                <div class="card-links">
-                                    <a href="https://github.com/docker/mcp-servers/blob/main/src/git">GitHub</a>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- GitHub -->
-                        <div class="card">
-                            <div class="card-header">GitHub</div>
-                            <div class="card-body">
-                                <div class="card-description">
-                                    <span class="badge official">Official</span>
-                                    <span class="badge pulls">914+ pulls</span>
-                                    <p>Repository management, file operations, and GitHub API integration</p>
-                                </div>
-                                <div class="card-links">
-                                    <a href="https://github.com/docker/mcp-servers/blob/main/src/github">GitHub</a>
-                                    <a href="https://hub.docker.com/r/mcp/github-mcp-server">Docker Hub</a>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- GitLab -->
-                        <div class="card">
-                            <div class="card-header">GitLab</div>
-                            <div class="card-body">
-                                <div class="card-description">
-                                    <span class="badge official">Official</span>
-                                    <span class="badge pulls">3.9K+ pulls</span>
-                                    <p>GitLab API, enabling project management</p>
-                                </div>
-                                <div class="card-links">
-                                    <a href="https://github.com/docker/mcp-servers/blob/main/src/gitlab">GitHub</a>
-                                    <a href="https://hub.docker.com/r/mcp/gitlab">Docker Hub</a>
-                                </div>
-                            </div>
-                        </div>
+                        <!-- Will be populated by JavaScript -->
                     </div>
                 </section>
                 
@@ -232,6 +99,10 @@
                             <li>Once installed, open the extension from the left sidebar</li>
                             <li>Browse the catalog and start using MCP tools with your AI assistant</li>
                         </ol>
+                        
+                        <h3>About This Portal</h3>
+                        <p>This portal automatically checks for new MCP servers added to the Docker repository and adds them to the catalog. The Features filter allows you to find specific types of MCP servers based on their functionality.</p>
+                        <p>Last updated: <span id="last-updated"></span></p>
                     </div>
                 </section>
             </div>
@@ -244,14 +115,17 @@
                 <p>© 2025 Docker MCP Toolkit Portal</p>
             </div>
             <div class="footer-links">
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms of Service</a>
-                <a href="#">Contact</a>
-                <a href="https://github.com/ajeetraina/docker-mcp-toolkit">GitHub</a>
+                <a href="https://github.com/ajeetraina/docker-mcp-toolkit" target="_blank">GitHub Repository</a>
+                <a href="https://github.com/docker/mcp-servers" target="_blank">Official MCP Servers</a>
+                <a href="https://github.com/docker/labs-ai-tools-for-devs" target="_blank">Docker AI Tools</a>
             </div>
         </div>
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        // Add last updated date
+        document.getElementById('last-updated').textContent = new Date().toLocaleString();
+    </script>
 </body>
 </html>

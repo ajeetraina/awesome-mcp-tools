@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docker MCP Toolkit Portal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png" alt="Docker Logo">
+                <span>MCP Toolkit</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#official-servers">Official Servers</a></li>
+                    <li><a href="#enterprise-integrations">Enterprise Integrations</a></li>
+                    <li><a href="#mcp-tools">MCP Tools</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </nav>
+            <div class="search-container">
+                <input type="search" class="search-input" placeholder="Search servers...">
+                <span class="search-icon">🔍</span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="content-wrapper">
+            <aside class="sidebar">
+                <h2>Categories</h2>
+                <ul>
+                    <li><a href="#official-servers" class="active">Official MCP Servers</a></li>
+                    <li><a href="#enterprise-integrations">Enterprise Integrations</a></li>
+                    <li><a href="#mcp-tools">Docker MCP Tools</a></li>
+                </ul>
+                
+                <h2>Features</h2>
+                <ul>
+                    <li><a href="#">File Operations</a></li>
+                    <li><a href="#">Database Access</a></li>
+                    <li><a href="#">API Integration</a></li>
+                    <li><a href="#">Web Automation</a></li>
+                    <li><a href="#">AI Tools</a></li>
+                </ul>
+            </aside>
+
+            <div>
+                <section id="official-servers">
+                    <h2 class="section-title">Official MCP Servers</h2>
+                    <div class="cards-container">
+                        <!-- AWS KB Retrieval -->
+                        <div class="card">
+                            <div class="card-header">AWS KB Retrieval</div>
+                            <div class="card-body">
+                                <div class="card-description">
+                                    <span class="badge official">Official</span>
+                                    <span class="badge pulls">960+ pulls</span>
+                                    <p>Retrieval from AWS Knowledge Base using Bedrock Agent Runtime</p>
+                                </div>
+                                <div class="card-links">
+                                    <a href="https://github.com/docker/mcp-servers/blob/main/src/aws-kb-retrieval-server">GitHub</a>
+                                    <a href="https://hub.docker.com/r/mcp/aws-kb-retrieval-server">Docker Hub</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Brave Search -->
+                        <div class="card">
+                            <div class="card-header">Brave Search</div>
+                            <div class="card-body">
+                                <div class="card-description">
+                                    <span class="badge official">Official</span>
+                                    <p>Web and local search using Brave's Search API</p>
+                                </div>
+                                <div class="card-links">
+                                    <a href="https://github.com/docker/mcp-servers/blob/main/src/brave-search">GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- EverArt -->
+                        <div class="card">
+                            <div class="card-header">EverArt</div>
+                            <div class="card-body">
+                                <div class="card-description">
+                                    <span class="badge official">Official</span>
+                                    <p>AI image generation using various models</p>
+                                </div>
+                                <div class="card-links">
+                                    <a href="https://github.com/docker/mcp-servers/blob/main/src/everart">GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Everything -->
+                        <div class="card">
+                            <div class="card-header">Everything</div>
+                            <div class="card-body">
+                                <div class="card-description">
+                                    <span class="badge official">Official</span>
+                                    <p>Reference / test server with prompts, resources, and tools</p>
+                                </div>
+                                <div class="card-links">
+                                    <a href="https://github.com/docker/mcp-servers/blob/main/src/everything">GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Fetch -->
+                        <div class="card">
+                            <div class="card-header">Fetch</div>
+                            <div class="card-body">
+                                <div class="card-description">
+                                    <span class="badge official">Official</span>
+                                    <p>Web content fetching and conversion for efficient LLM usage</p>
+                                </div>
+                                <div class="card-links">
+                                    <a href="https://github.com/docker/mcp-servers/blob/main/src/fetch">GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Filesystem -->
+                        <div class="card">
+                            <div class="card-header">Filesystem</div>
+                            <div class="card-body">
+                                <div class="card-description">
+                                    <span class="badge official">Official</span>
+                                    <p>Secure file operations with configurable access controls</p>
+                                </div>
+                                <div class="card-links">
+                                    <a href="https://github.com/docker/mcp-servers/blob/main/src/filesystem">GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Git -->
+                        <div class="card">
+                            <div class="card-header">Git</div>
+                            <div class="card-body">
+                                <div class="card-description">
+                                    <span class="badge official">Official</span>
+                                    <p>Tools to read, search, and manipulate Git repositories</p>
+                                </div>
+                                <div class="card-links">
+                                    <a href="https://github.com/docker/mcp-servers/blob/main/src/git">GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- GitHub -->
+                        <div class="card">
+                            <div class="card-header">GitHub</div>
+                            <div class="card-body">
+                                <div class="card-description">
+                                    <span class="badge official">Official</span>
+                                    <span class="badge pulls">914+ pulls</span>
+                                    <p>Repository management, file operations, and GitHub API integration</p>
+                                </div>
+                                <div class="card-links">
+                                    <a href="https://github.com/docker/mcp-servers/blob/main/src/github">GitHub</a>
+                                    <a href="https://hub.docker.com/r/mcp/github-mcp-server">Docker Hub</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- GitLab -->
+                        <div class="card">
+                            <div class="card-header">GitLab</div>
+                            <div class="card-body">
+                                <div class="card-description">
+                                    <span class="badge official">Official</span>
+                                    <span class="badge pulls">3.9K+ pulls</span>
+                                    <p>GitLab API, enabling project management</p>
+                                </div>
+                                <div class="card-links">
+                                    <a href="https://github.com/docker/mcp-servers/blob/main/src/gitlab">GitHub</a>
+                                    <a href="https://hub.docker.com/r/mcp/gitlab">Docker Hub</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <section id="enterprise-integrations">
+                    <h2 class="section-title">Enterprise Integrations</h2>
+                    <div class="cards-container" id="enterprise-cards"></div>
+                </section>
+                
+                <section id="mcp-tools">
+                    <h2 class="section-title">Docker MCP Tools</h2>
+                    <div class="cards-container" id="tool-cards"></div>
+                </section>
+                
+                <section id="about">
+                    <h2 class="section-title">About Docker MCP Toolkit</h2>
+                    <div class="about-content">
+                        <h3>What is MCP?</h3>
+                        <p>Model Context Protocol (MCP) is an open protocol that standardizes how applications provide context to LLMs. It's like a "USB-C port for AI applications" - providing a standardized way to connect AI models to different data sources and tools, allowing LLMs to:</p>
+                        <ul>
+                            <li>Access data from diverse sources (files, databases, APIs)</li>
+                            <li>Use specialized tools to perform actions</li>
+                            <li>Work with prompt templates for standard workflows</li>
+                            <li>Operate with enhanced privacy and security</li>
+                        </ul>
+                        
+                        <h3>MCP Architecture</h3>
+                        <p>MCP follows a client-server architecture where:</p>
+                        <ul>
+                            <li><strong>MCP Clients:</strong> Programs like Claude Desktop, IDE plugins, or other AI tools that want to access data through MCP</li>
+                            <li><strong>MCP Servers:</strong> Lightweight programs that expose specific capabilities (like file access, database queries, or API interactions) through the standardized protocol</li>
+                        </ul>
+                        
+                        <h3>Using Docker MCP Toolkit</h3>
+                        <p>To use Docker MCP Toolkit, you need:</p>
+                        <ol>
+                            <li>Docker Desktop 4.10 or higher</li>
+                            <li>Install the extension from Docker Hub</li>
+                            <li>Browse available MCP servers and connect them to your MCP client (like Claude Desktop)</li>
+                        </ol>
+                        
+                        <h4>Installation Steps</h4>
+                        <ol>
+                            <li>Open Docker Desktop</li>
+                            <li>Go to Extensions Marketplace</li>
+                            <li>Search for "Docker MCP Toolkit"</li>
+                            <li>Click Install</li>
+                            <li>Once installed, open the extension from the left sidebar</li>
+                            <li>Browse the catalog and start using MCP tools with your AI assistant</li>
+                        </ol>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div>
+                <p>© 2025 Docker MCP Toolkit Portal</p>
+            </div>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact</a>
+                <a href="https://github.com/ajeetraina/docker-mcp-toolkit">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

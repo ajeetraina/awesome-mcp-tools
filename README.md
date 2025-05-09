@@ -2,7 +2,7 @@
 
 A comprehensive web-based portal for exploring and navigating the Docker Model Context Protocol (MCP) servers and clients.
 
-🔗 **Live Site**: [mcptoolkits.com](https://mcptoolkits.com)
+? **Live Site**: [mcptoolkits.com](https://mcptoolkits.com)
 
 ## Overview
 
@@ -50,6 +50,115 @@ Servers are additionally categorized by functionality:
 - **Web Automation**: For web scraping and browser automation
 - **AI Tools**: For artificial intelligence and machine learning
 - **Development**: For developer tools and utilities
+
+## List of MCP Servers
+
+There are currently 109 MCP servers available:
+
+1. 302_sandbox
+2. 3d-printer
+3. armor-crypto
+4. astra-db
+5. atlas-docs
+6. atlassian
+7. audiense-insights
+8. aws-kb-retrieval-server
+9. azure
+10. barryyip0625-mcp-discord
+11. basic-memory
+12. bitrefill
+13. box
+14. brave
+15. chroma
+16. circleci
+17. context7
+18. cyreslab-ai-shodan
+19. dappier
+20. dart
+21. databutton
+22. descope
+23. desktop-commander
+24. devhub-cms
+25. doit
+26. duckduckgo
+27. e2b
+28. edubase
+29. elasticsearch
+30. elevenlabs
+31. everart
+32. exa
+33. fetch
+34. fibery
+35. filesystem
+36. firecrawl
+37. flexprice
+38. gdrive
+39. github-chat
+40. github-official
+41. github
+42. gitlab
+43. glif
+44. google-maps
+45. grafana
+46. gyazo
+47. hackle
+48. handwriting-ocr
+49. heroku
+50. husqvarna-automower
+51. hyperbrowser
+52. hyperspell
+53. iaptic
+54. jetbrains
+55. kagisearch
+56. kong
+57. kubernetes
+58. lara
+59. line
+60. mcp-discord
+61. mcp-notion-server
+62. multiversx-mx
+63. neo4j-cloud-aura-api
+64. neo4j-cypher
+65. neo4j-memory
+66. neo4j-server
+67. neon
+68. neondatabase-labs
+69. notion
+70. obsidian
+71. octomind
+72. openapi-schema
+73. opik
+74. osp_marketing_tools
+75. oxylabs
+76. perplexity-ask
+77. playwright
+78. postgres
+79. postgresql
+80. pulumi
+81. puppeteer
+82. razorpay
+83. redis-cloud
+84. redis
+85. resend
+86. risken
+87. scrapegraph
+88. scrapezy
+89. sentry
+90. shopify
+91. slack
+92. smithery-cli
+93. stripe
+94. tavily
+95. tembo
+96. time
+97. triplewhale
+98. tweetbinder
+99. v-3-discordmcp
+100. veyrax
+101. webflow
+102. wikipedia-mcp
+103. wolfram-alpha
+104. youtube_transcript
 
 ## Using Docker MCP Toolkit
 

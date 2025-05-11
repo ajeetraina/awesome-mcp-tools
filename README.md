@@ -50,6 +50,19 @@ Servers are additionally categorized by functionality:
 - **AI Tools**: For artificial intelligence and machine learning
 - **Development**: For developer tools and utilities
 
+## List of MCP Clients
+
+There are currently 4 MCP servers available:
+
+| # | MCP Client | Link |
+|---|------------|------|
+| 1 | Ask Gordon | [GitHub]() |
+| 2 | Claude Desktop| [GitHub]() |
+| 3 | Cursor | [GitHub]() |
+| 4 | Continue.dev | [GitHub]() |
+
+
+
 ## List of MCP Servers
 
 There are currently 109 MCP servers available:

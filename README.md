@@ -34,11 +34,10 @@ The Docker MCP Toolkit Portal provides:
 
 ## Categories
 
-The portal organizes MCP servers into three main categories:
+The portal organizes MCP servers into two main categories:
 
-1. **Official MCP Servers**: Maintained as reference implementations by Docker/Anthropic
-2. **Enterprise Integrations**: MCP servers maintained by companies for their platforms
-3. **Docker MCP Tools**: Tools related to Docker MCP ecosystem
+1. **Official MCP Servers**: Maintained as reference implementations by Docker Team
+2. **Docker MCP Clients**: Tools related to Docker MCP ecosystem - Ask Gordon, Claude Desktop, Cursor and Continue.dev
 
 ## Feature Categories
 

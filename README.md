@@ -2,7 +2,7 @@
 
 A comprehensive web-based portal for exploring and navigating the Docker Model Context Protocol (MCP) servers and clients.
 
-? **Live Site**: [mcptoolkits.com](https://mcptoolkits.com)
+ **Live Site**: [mcptoolkits.com](https://mcptoolkits.com)
 
 ## Overview
 
